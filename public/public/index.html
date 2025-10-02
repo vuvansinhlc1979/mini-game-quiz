@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tham gia Game Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="game-container">
+        <div id="login-screen">
+            <h1>Nhập tên của bạn</h1>
+            <input type="text" id="player-name-input" placeholder="Tên người chơi...">
+            <button id="join-game-btn">Tham gia</button>
+        </div>
+
+        <div id="waiting-screen" class="hidden">
+            <h1>Đã tham gia!</h1>
+            <p>Vui lòng chờ quản trò bắt đầu...</p>
+        </div>
+
+        <div id="question-screen" class="hidden">
+            <h2 id="question-text">Đây là câu hỏi?</h2>
+            <div id="answer-options" class="answer-grid">
+                </div>
+        </div>
+
+        <div id="eliminated-screen" class="hidden">
+            <div class="eliminated-box">
+                <span>X</span>
+            </div>
+            <p>Bạn đã trả lời sai và mất quyền chơi tiếp.</p>
+        </div>
+
+         <div id="game-over-screen" class="hidden">
+            <h1 id="game-over-message">Game kết thúc!</h1>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
